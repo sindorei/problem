@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <title>compositionstart test</title>
+        <style>
+            p { width: 500px; height: 200px; border: 1px solid #ccc;}
+        </style>
+    </head>
+    <body>
+        <input type="text" id="input1" value="">
+        <p id="p1"></p>
+        <script type="text/javascript">
+            var oInput = document.getElementById('input1');
+            var oP = document.getElementById('p1');
+            oInput.addEventListener('input',function(e) {
+                oP.innerHTML = this.value;
+            })
+            oInput.addEventListener('compositionstart',function(e) {
+                oP.innerHTML = '触发啦';
+            })
+        </script>
+    </body>
+</html>
