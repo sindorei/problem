@@ -42,7 +42,7 @@
 
 ![$.param 内部会编码](images/encode/6-2.png)
 
-** 总结: **
+**总结:**
 
 如果get方法向后台提交数据
 - 数据是拼接在url中的，需要对参数进行编码处理（`encodeURIComponent`）
