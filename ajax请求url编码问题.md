@@ -41,3 +41,9 @@
 ![$.param 内部会编码](images/encode/6-1.png)
 
 ![$.param 内部会编码](images/encode/6-2.png)
+
+** 总结: **
+
+如果get方法向后台提交数据
+- 数据是拼接在url中的，需要对参数进行编码处理（`encodeURIComponent`）
+- 数据是个对象，传到`$.ajax`的data参数中，方法内部会进行编码，无需再处理
